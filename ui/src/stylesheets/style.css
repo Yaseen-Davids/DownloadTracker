@@ -1,0 +1,22 @@
+.grid-container {
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: 'movies series';
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  grid-gap: 50px;
+  padding: 20px;
+}
+
+.movies-main {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: movies;
+}
+
+.series-main {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: series;
+}
+/*# sourceMappingURL=style.css.map */

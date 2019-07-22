@@ -1,0 +1,15 @@
+.grid-container{
+  display: grid;
+  grid-template-areas: 'movies series';
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 50px;
+  padding: 20px;
+}
+
+.movies-main {
+  grid-area: movies;
+}
+
+.series-main {
+  grid-area: series;
+}
