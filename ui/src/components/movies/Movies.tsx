@@ -3,7 +3,7 @@ import { MoviesType } from "../../lib/types";
 import { MoviesContext } from "../../contexts/MoviesContext";
 // import { createStyles, makeStyles, Theme } from "@material-ui/core/styles";
 import Loading from "../Loading";
-import MUIDataTable from "mui-datatables";
+import Table from "../Table";
 
 interface MoviesProps {
   // movies: MoviesType[];
@@ -26,11 +26,9 @@ const Movies = function (props: MoviesProps) {
     { name: "created_at", label: "Date" },
   ];
 
-  const options: any = {
-    print: false,
-    download: false,
-    viewColumns: false,
-  };
+  const DeleteMovies = (id: number) => {
+    
+  }
 
   if (!loading.loaded) {
     return (
@@ -40,12 +38,7 @@ const Movies = function (props: MoviesProps) {
 
   return (
     <div>
-      <MUIDataTable
-        title={"Movies to download"}
-        data={movies}
-        columns={columns}
-        options={options}
-      />
+      <Table columns={columns} data={movies} delete={DeleteMovieData} />
     </div>
   )
 }
