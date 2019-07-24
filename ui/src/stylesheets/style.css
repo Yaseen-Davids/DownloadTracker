@@ -32,6 +32,120 @@
   }
 }
 
+.series-main {
+  border: 1px solid #f0f0f0;
+  height: 500px;
+}
+
+.series-main .series-header {
+  background: #f0f0f0;
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "series-header-title series-header-button";
+  -ms-grid-columns: 1fr 20%;
+      grid-template-columns: 1fr 20%;
+  padding: 10px;
+}
+
+.series-main .series-header .series-header-title {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: series-header-title;
+}
+
+.series-main .series-header .series-header-button {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: series-header-button;
+}
+
+.series-main .series-body .add-new-main {
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "name name name name" "season episode . .";
+  grid-auto-columns: 1fr 1fr 1fr 1fr;
+  padding: 10px;
+  grid-gap: 10px;
+  border-bottom: 1px solid #cecece;
+}
+
+.series-main .series-body .add-new-main .add-new-name {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-area: name;
+}
+
+.series-main .series-body .add-new-main .add-new-name input {
+  padding: 5px 10px;
+  border: 1px solid #cecece;
+  border-radius: 4px;
+}
+
+.series-main .series-body .add-new-main .add-new-season {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: season;
+}
+
+.series-main .series-body .add-new-main .add-new-season input {
+  padding: 5px 10px;
+  border: 1px solid #cecece;
+  border-radius: 4px;
+}
+
+.series-main .series-body .add-new-main .add-new-episode {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: episode;
+}
+
+.series-main .series-body .add-new-main .add-new-episode input {
+  padding: 5px 10px;
+  border: 1px solid #cecece;
+  border-radius: 4px;
+}
+
+.series-main .series-body .series-body-content {
+  padding: 10px;
+}
+
+.series-main .series-body .series-body-content .series-item {
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "title info delete";
+  -ms-grid-columns: 1fr 15% 10%;
+      grid-template-columns: 1fr 15% 10%;
+  margin-bottom: 10px;
+}
+
+.series-main .series-body .series-body-content .series-item .series-title {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: title;
+}
+
+.series-main .series-body .series-body-content .series-item .series-info {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: info;
+}
+
+.series-main .series-body .series-body-content .series-item .series-info .series-info-season {
+  margin-right: 5px;
+}
+
+.series-main .series-body .series-body-content .series-item .series-info .series-info-text {
+  font-weight: bolder;
+  font-size: 14px;
+}
+
+.series-main .series-body .series-body-content .series-item .series-delete {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: delete;
+}
+
 .grid-container {
   display: -ms-grid;
   display: grid;
@@ -40,6 +154,8 @@
       grid-template-columns: 1fr 1fr;
   grid-gap: 50px;
   padding: 20px;
+  margin-left: 300px;
+  margin-right: 300px;
 }
 
 .movies-main {

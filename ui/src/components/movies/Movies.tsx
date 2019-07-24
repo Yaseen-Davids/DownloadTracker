@@ -3,7 +3,6 @@ import { MoviesType } from "../../lib/types";
 import { MoviesContext } from "../../contexts/MoviesContext";
 // import { createStyles, makeStyles, Theme } from "@material-ui/core/styles";
 import Loading from "../Loading";
-import Table from "../Table";
 
 interface MoviesProps {
   // movies: MoviesType[];
@@ -23,7 +22,7 @@ const Movies = function (props: MoviesProps) {
 
   const columns = [
     { name: "title", label: "Name" },
-    { name: "created_at", label: "Date" },
+    // { name: "created_at", label: "Date" },
   ];
 
   const DeleteMovies = (id: number) => {
@@ -38,7 +37,6 @@ const Movies = function (props: MoviesProps) {
 
   return (
     <div>
-      <Table columns={columns} data={movies} delete={DeleteMovieData} />
     </div>
   )
 }

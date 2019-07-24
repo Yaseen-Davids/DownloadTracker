@@ -1,0 +1,92 @@
+@mixin input {
+  padding: 5px 10px;
+  border: 1px solid #cecece;
+  border-radius: 4px;
+}
+
+.series-main {
+  border: 1px solid #f0f0f0;
+  height: 500px;
+
+  .series-header {
+    background: #f0f0f0;
+    display: grid;
+    grid-template-areas: "series-header-title series-header-button";
+    grid-template-columns: 1fr 20%;
+    padding: 10px;
+
+    .series-header-title {
+      grid-area: series-header-title;
+    }
+
+    .series-header-button {
+      grid-area: series-header-button;
+    }
+  }
+
+  .series-body {
+    
+    .add-new-main {
+      display: grid;
+      grid-template-areas: "name name name name"
+        "season episode . .";
+      grid-auto-columns: 1fr 1fr 1fr 1fr;
+      padding: 10px;
+      grid-gap: 10px;
+      border-bottom: 1px solid #cecece;
+
+      .add-new-name {
+        grid-area: name;
+        input {
+          @include input();
+        }
+      }
+
+      .add-new-season {
+        grid-area: season;
+        input {
+          @include input();
+        }
+      }
+
+      .add-new-episode {
+        grid-area: episode;
+        input {
+          @include input();
+        }
+      }
+    }
+
+    .series-body-content {
+      padding: 10px;
+
+      .series-item {
+        display: grid;
+        grid-template-areas: "title info delete";
+        grid-template-columns: 1fr 15% 10%;
+        margin-bottom: 10px;
+
+        .series-title {
+          grid-area: title;
+        }
+
+        .series-info {
+          grid-area: info;
+
+          .series-info-season {
+            margin-right: 5px;
+          }
+
+          .series-info-text {
+            font-weight: bolder;
+            font-size: 14px;
+          }
+        }
+
+        .series-delete {
+          grid-area: delete;
+        }
+      }
+    }
+  }
+}

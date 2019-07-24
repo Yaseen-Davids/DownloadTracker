@@ -1,4 +1,5 @@
 @import "./loading";
+@import "./series";
 
 .grid-container{
   display: grid;
@@ -6,6 +7,8 @@
   grid-template-columns: 1fr 1fr;
   grid-gap: 50px;
   padding: 20px;
+  margin-left: 300px;
+  margin-right: 300px;
 }
 
 .movies-main {
